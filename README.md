@@ -1,2 +1,2 @@
-# drug_modelling
-Drug modelling
+# Drug modelling
+Drug modelling using AI
