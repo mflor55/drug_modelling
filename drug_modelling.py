@@ -8,6 +8,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.linear_model import LogisticRegression
+from tabulate import tabulate
 
 # Funkcja do usuwania jednej literki
 def remove_letter(word):
@@ -28,6 +29,7 @@ def add_spacebar(word):
     i=random.randint(0, len(word) - 2)
     return word[:i]+ " " + word[i:]
 
+# Funkcja do losowania blednej nazwy leku
 def randomize_wrong_drug(drug, wrong_drug):
     new_wrong_drug = remove_letter(remove_letter(drug))
     new_wrong_drug = add_spacebar(new_wrong_drug)
@@ -111,4 +113,4 @@ clfs=[
 
 for clf in clfs:
    run(wrong_drugs_train_vectorized, correct_drugs_train, wrong_drugs_test_vectorized, correct_drugs_test, clf, str(clf))
-print(results)
+print(tabulate(results, headers="keys", tablefmt="fancy_grid"))
