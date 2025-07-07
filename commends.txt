@@ -2,4 +2,4 @@ python3 -m venv venv                - stowrz virtualne srodowski o nazwie venv
 source venv/bin/activate            - wejdz do wirtualnego srodowiska
 deactivate                          - wyjdz z wirtualnego srodowiska
 pip3 install -r requirements.txt    - instaluj pakiety z pliku requirements.txt
-python3 modelowanie_lekow.py      - uruchom skrypt 
+python3 drug_modelling.py      - uruchom skrypt 
